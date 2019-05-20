@@ -1,5 +1,5 @@
 import assert from "assert";
-import {Apis, ChainConfig} from "bitsharesjs-ws";
+import {Apis, ChainConfig} from "hxjs-ws";
 import {ChainStore} from "../../lib";
 // var objs = require("./testObjects.json");
 

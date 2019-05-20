@@ -1,5 +1,5 @@
 import assert from "assert";
-import {Apis} from "bitsharesjs-ws";
+import {Apis} from "hxjs-ws";
 import {TransactionBuilder} from "../../lib";
 
 describe("TransactionBuilder", () => {
@@ -275,11 +275,11 @@ describe("TransactionBuilder", () => {
                             tr.operations[1][1].fee.amount
                     );
                     /*
-                * This test might break as fee pools are replenished, check and
-                * update assets used if necessary. At least one asset should
-                * have an insufficient pool balance, and one should have a
-                * sufficient pool balance
-                */
+                     * This test might break as fee pools are replenished, check and
+                     * update assets used if necessary. At least one asset should
+                     * have an insufficient pool balance, and one should have a
+                     * sufficient pool balance
+                     */
                     tr.operations[0][1].proposed_ops.forEach((prop, index) => {
                         if (index === 2)
                             assert.equal(prop.op[1].fee.asset_id, "1.3.113");
